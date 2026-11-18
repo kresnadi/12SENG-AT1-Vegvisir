@@ -1,13 +1,22 @@
-CREATE TABLE collections {
-    col_id UUID PRIMARY KEY gen_random_uuid(),
-    col_name VARCHAR(24),
-    col_desc VARCHAR(255),
-    
-}
+CREATE TABLE IF NOT EXISTS collections (
+  col_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  col_name VARCHAR(24) NOT NULL,
+  col_desc VARCHAR(255)
+);
 
-CREATE TABLE locations {
-    loc_id UUID PRIMARY KEY gen_random_uuid(),
-    col_id UUID,
-    loc_latitude FLOAT,
-    loc_longitude FLOAT,
-}
+CREATE TABLE IF NOT EXISTS locations (
+  loc_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  col_id UUID NOT NULL REFERENCES collections(col_id) ON DELETE CASCADE,
+  loc_latitude DOUBLE PRECISION NOT NULL,
+  loc_longitude DOUBLE PRECISION NOT NULL,
+  loc_image TEXT NOT NULL,
+  loc_credit TEXT
+);
+
+CREATE TABLE IF NOT EXISTS scores (
+  score_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  col_id UUID REFERENCES collections(col_id) ON DELETE SET NULL,
+  mode VARCHAR(8) NOT NULL,
+  total INTEGER NOT NULL,
+  played_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);

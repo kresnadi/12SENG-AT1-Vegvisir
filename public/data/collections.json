@@ -1,0 +1,46 @@
+{
+ "collections": [
+  {
+   "id": "6f1c0d52-3a0e-4b6e-9a53-0f2f6b8b1a01",
+   "name": "Demo",
+   "desc": "Placeholder panoramas",
+   "locations": [
+    {
+     "id": "44667d98-d8ab-532d-abec-ef693baf1090",
+     "lat": 32.0783,
+     "lng": 34.7776,
+     "image": "/panos/demo-1.jpg",
+     "credit": "Generated placeholder"
+    },
+    {
+     "id": "6f2b2c1f-db24-5798-9070-0e184949f3a8",
+     "lat": 64.1466,
+     "lng": -21.9426,
+     "image": "/panos/demo-2.jpg",
+     "credit": "Generated placeholder"
+    },
+    {
+     "id": "f3f9e944-e2ba-5878-9cf6-e1770fbde8f8",
+     "lat": 35.6762,
+     "lng": 139.6503,
+     "image": "/panos/demo-3.jpg",
+     "credit": "Generated placeholder"
+    },
+    {
+     "id": "6f0c43c4-cb86-5c53-ab8f-6cded0f0613a",
+     "lat": -33.9249,
+     "lng": 18.4241,
+     "image": "/panos/demo-4.jpg",
+     "credit": "Generated placeholder"
+    },
+    {
+     "id": "9efdaf16-53be-5cfa-a57f-8ecdef61d446",
+     "lat": -34.6037,
+     "lng": -58.3816,
+     "image": "/panos/demo-5.jpg",
+     "credit": "Generated placeholder"
+    }
+   ]
+  }
+ ]
+}
